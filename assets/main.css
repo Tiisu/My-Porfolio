@@ -43,7 +43,12 @@ nav .nav-links {
 }
 
 nav .logo{
-    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
 }
 
 nav .logo img {
@@ -54,6 +59,18 @@ nav .logo img {
 
 ul, li{
     list-style-type: none;
+    color: white;
+}
+
+.nav-links ul  {
+    display: flex;
+    gap: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+
 }
 
 .hero {

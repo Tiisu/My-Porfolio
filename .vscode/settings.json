@@ -1,5 +1,6 @@
 {
     "CodeGPT.apiKey": "Ollama",
     "CodeGPT.Autocomplete.provider": "Ollama - codegpt/replit-code-v1_5-3b",
-    "CodeGPT.Autocomplete.enabled": true
+    "CodeGPT.Autocomplete.enabled": true,
+    "liveServer.settings.port": 5501
 }
