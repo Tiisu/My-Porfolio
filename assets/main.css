@@ -372,3 +372,88 @@ li a {
         left: 0%;
     }
 }
+
+/* Add this at the end of your CSS file */
+.footer {
+    margin-top: 50px;
+    padding: 40px 0 20px;
+    border-top: 2px solid var(--color-primary);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: var(--color-gray);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: var(--color-gray);
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--color-gray);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: var(--color-gray);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: var(--color-gray);
+    opacity: 0.7;
+}
+
+/* Optimization for mobile devices */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
