@@ -26,3 +26,26 @@ function openService (evt, serviceName) {
 }
 
 document.getElementById("default").click();
+
+// Add this to your existing JavaScript
+document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    const menuButton = document.querySelector('.mobile-menu-toggle');
+
+    if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+    }
+});
+
+// Close menu when window is resized above mobile breakpoint
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        document.querySelector('.nav-links').classList.remove('active');
+    }
+document.getElementById("default").click();

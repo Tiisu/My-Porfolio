@@ -72,7 +72,196 @@ li a {
     color: white;
 
 }
+/* Add these media queries at the end of your CSS file */
 
+/* Tablet and smaller desktop screens */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-display {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .tabcontent-show {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    /* Hero section */
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Services section */
+    .services {
+        grid-template-columns: 1fr;
+        margin: 15px;
+    }
+
+    .services1 {
+        padding: 20px;
+    }
+
+    /* Portfolio section */
+    .tabcontent-show {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        margin: 10px 0;
+    }
+
+    /* Skills section */
+    .skills-progress-bar {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    /* Features section */
+    .features h1 {
+        font-size: 40px;
+    }
+
+    /* Tabs */
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabs button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .socials {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .features h1 {
+        font-size: 32px;
+    }
+
+    .p-text h1 {
+        font-size: 32px;
+    }
+
+    body {
+        border-width: 15px;
+        padding: 10px;
+    }
+
+    .portfolio-content img {
+        height: 200px;
+    }
+}
+
+/* For better touch targets on mobile */
+@media (hover: none) {
+    .tabs button,
+    .nav-links a,
+    .footer-section a {
+        padding: 12px;
+    }
+
+    .portfolio-content:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        border: none;
+    }
+
+    .nav-links,
+    .socials,
+    .tabs,
+    .footer-social {
+        display: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-secondary: #e4e5e6;
+        --color-gray: #d1d1d1;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
 .hero {
     display: flex;
     justify-content: center;
@@ -455,5 +644,30 @@ li a {
 @media screen and (max-width: 480px) {
     .footer-content {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile menu styles */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
     }
 }
