@@ -48,4 +48,4 @@ window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
         document.querySelector('.nav-links').classList.remove('active');
     }
-document.getElementById("default").click();
+document.getElementById("default").click()
